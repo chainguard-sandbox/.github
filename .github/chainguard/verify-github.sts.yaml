@@ -1,0 +1,16 @@
+# Copyright 2025 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+issuer: https://token.actions.githubusercontent.com
+subject_pattern: repo:chainguard-dev/infra:.*
+claim_pattern:
+  job_workflow_ref: chainguard-dev/infra/.github/workflows/.terraform.yaml@.*
+
+permissions:
+  administration: read # required to read the repository
+  contents: write # required per terraform docs (https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository)
+  members: read # to read GitHub members information
+  metadata: read # to read metadata about the org
+  pages: read # to read GitHub Pages settings as part of the repository management
+
+repositories: [] # Act over all of the repos in the org.
