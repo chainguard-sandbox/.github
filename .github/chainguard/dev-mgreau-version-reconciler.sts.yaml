@@ -1,0 +1,11 @@
+issuer: https://accounts.google.com
+# version-reconciler@mgreau85-chainguard.iam.gserviceaccount.com
+subject: "115273003369436100204"
+
+permissions:
+  contents: read
+  checks: read
+  pull_requests: write
+
+repositories:
+
