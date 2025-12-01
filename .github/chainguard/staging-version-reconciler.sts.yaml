@@ -1,0 +1,13 @@
+# Copyright 2025 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+issuer: https://accounts.google.com
+
+# version-reconciler@staging-enforce-cd1e.iam.gserviceaccount.com
+subject: "111326594707167142858"
+
+permissions:
+  contents: read # to fetch releases and tags from repositories
+  metadata: read # to read repository metadata
+
+repositories: [] # Act over all of the repos in the org.
