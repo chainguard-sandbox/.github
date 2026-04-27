@@ -1,0 +1,12 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+issuer: https://accounts.google.com
+
+# eco-approver@staging-enforce-cd1e.iam.gserviceaccount.com
+subject: "107653388839841209821"
+
+permissions:
+  contents: write
+  checks: read
+  pull_requests: write
