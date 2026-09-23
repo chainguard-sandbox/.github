@@ -1,0 +1,13 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+# OS-2854 jbcg.dev export job; no access to the publication repository.
+# export-wolfi-proof@borg-chainguard-dev.iam.gserviceaccount.com
+issuer: https://accounts.google.com
+subject: "104839036529472558325"
+
+repositories:
+  - export-wolfi-proof
+
+permissions:
+  contents: write
