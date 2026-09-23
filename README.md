@@ -20,7 +20,14 @@ and `export-wolfi-proof-publish@borg-chainguard-dev.iam.gserviceaccount.com`,
 respectively. Each policy explicitly names one repository. Never omit that list
 or add staging/production identities to these dev policies.
 
+The jobs use images built directly with ko. Fetching the pinned git-export source
+is a build-time concern; these policies authorize only runtime access to the
+scratch destination repositories. Neither runtime identity receives access to
+the git-export source repository or an enterprise package-builder policy.
+
 Merge these policies before switching the paused proof jobs to the split
-identities. Revoke the old repository-local shared policy, then verify that the
-export identity cannot exchange the publish-write policy and the publish identity
-cannot exchange the staging-write policy before enabling scratch writes.
+identities. The old repository-local shared policy was retired in
+[export-wolfi-proof#2](https://github.com/chainguard-sandbox/export-wolfi-proof/pull/2).
+Verify that the export identity cannot exchange the publish-write policy and the
+publish identity cannot exchange the staging-write policy before enabling scratch
+writes.
