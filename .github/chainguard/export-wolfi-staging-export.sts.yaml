@@ -1,0 +1,13 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+# OS-2866 chainops.dev export job: write only the export destination.
+# export-wolfi-staging@staging-enforce-cd1e.iam.gserviceaccount.com
+issuer: https://accounts.google.com
+subject: "104108212822327502512"
+
+repositories:
+  - export-wolfi-proof
+
+permissions:
+  contents: write
