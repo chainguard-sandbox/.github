@@ -1,0 +1,9 @@
+# octo-sts trust policy for the gha-supply-chain dev sweep (sbeattie-dev).
+# Lets the gha-db-sync Cloud Run job SA mint org-scoped, read-only GitHub
+# tokens for chainguard-sandbox. Dev-only (gha-sweep-dev); prod uses
+# gha-sweep.sts.yaml. subject = `terraform output sweep_sa_unique_id`.
+issuer: https://accounts.google.com
+subject: "105261857826059260978"
+permissions:
+  contents: read
+  metadata: read
