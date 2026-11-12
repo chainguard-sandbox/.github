@@ -1,0 +1,21 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+# Octo STS policy for the PMM OS harness, which opens pull requests that
+# propose product messaging changes for PMM to review.
+# Service account: pmm-os-harness@pmm-os-ownr.iam.gserviceaccount.com
+# Deployed by: project-definitions/dev/pmm-os/iac/main.tf in chainguard-dev/infra
+
+issuer: https://accounts.google.com
+subject: "113788532167204410985"
+
+permissions:
+  # Push the branches its pull requests come from
+  contents: write
+  # Open and update its pull requests
+  pull_requests: write
+  # Required baseline permission for all GitHub API access
+  metadata: read
+
+repositories:
+  - pmm-source
