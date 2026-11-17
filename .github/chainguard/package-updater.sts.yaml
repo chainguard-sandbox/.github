@@ -1,0 +1,19 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+# Lets package-updater read tags so it can bump the chainguard-dev/stereo
+# packages that build from these repos (compgencompare, eco-dotnet-apidiff,
+# eco-dotnet-test-explorer). Allowlisted in chainguard-dev/mono
+# env/enforce.dev/iac/400-package-updater.
+
+issuer: https://accounts.google.com
+
+# Service account: package-updater@prod-enforce-fabc.iam.gserviceaccount.com
+subject: "108966045143084436403"
+
+repositories:
+  - compgencompare
+  - ecosystems-dotnet-rebuilder
+
+permissions:
+  contents: read
