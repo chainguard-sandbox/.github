@@ -2,7 +2,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Octo STS policy for the PMM OS harness, which opens pull requests that
-# propose product messaging changes for PMM to review.
+# propose product messaging changes and weekly field drift issues for PMM to
+# review.
 # Service account: pmm-os-harness@pmm-os-ownr.iam.gserviceaccount.com
 # Deployed by: project-definitions/dev/pmm-os/iac/main.tf in chainguard-dev/infra
 
@@ -14,6 +15,8 @@ permissions:
   contents: write
   # Open and update its pull requests
   pull_requests: write
+  # Open and update its weekly field drift issues
+  issues: write
   # Required baseline permission for all GitHub API access
   metadata: read
 
