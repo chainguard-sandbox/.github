@@ -1,0 +1,20 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+# Lets pkg-upd-validator read tags so it can check package-updater PRs for
+# the chainguard-dev/stereo packages that build from these repos
+# (compgencompare, eco-dotnet-apidiff, eco-dotnet-test-explorer).
+# Allowlisted in chainguard-dev/mono
+# env/enforce.dev/iac/400-package-update-validator.
+
+issuer: https://accounts.google.com
+
+# Service account: pkg-upd-validator@prod-enforce-fabc.iam.gserviceaccount.com
+subject: "110959996406301074056"
+
+repositories:
+  - compgencompare
+  - ecosystems-dotnet-rebuilder
+
+permissions:
+  contents: read
